@@ -1,0 +1,55 @@
+Food ordering system
+
+Description:
+Implement an online food ordering system. Below are the expected features from the system.
+
+Features:
+This system has tie-ups with restaurants where each restaurant has a menu with all the items with its price.
+Each restaurant has a maximum processing capacity(food preparation) of items at any given time. Beyond that it won’t accept any further item requests until items which are in processing are completed.
+Each restaurant takes some time to prepare food. Once the item is fulfilled the system gets the notification of it which adds back the processing capacity of that restaurant.
+Order is accepted from customers only if all the items can be fulfilled by the restaurant and the restaurant has processing capacity for new orders.
+
+Requirements:
+Onboard new restaurant with its menu and item processing capacity. The menu should be reflected in the food ordering system.
+Restaurant should be able to change its menu.
+Customers should be able to place an order by giving items. We can assume that each item will be of only 1 quantity.
+Implement restaurant search and search strategies (Ex : items search with lowest fare strategy, Nearby Location)
+Order food based on the above search results.
+System should be able to keep track of all items served by each restaurant, and the system should be aware of the remaining capacity of each restaurant at a given time.
+Once the order is fulfilled by the restaurant, the capacity should be replenished for the given restaurant.
+*Every order can be fulfilled by one restaurent only.
+
+Assumptions:
+For feature 3 generic timeout can be configured.(Ex : 30 mins for all dishes)
+
+Bonus Points:
+Each dish can have different time configurations for preparation.
+Rating & Review for the restaurant.
+
+Other Details:
+Do not use any database or NoSQL store, use in-memory data-structure for now.
+Do not create any UI or API for the application.
+
+Expectations:
+Make sure that you have working and demonstrable code through test cases.
+Wherever required concurrent requests should be handled appropriately.
+Language should be in java.
+Make sure that code is functionally correct.
+Work on the expected output first and then add good-to-have features of your own.
+Code should be modular and readable.
+Separation of concern should be addressed.
+Code should easily accommodate new requirements with minimal changes.
+Code should be easily testable.
+
+Test-cases:
+Below are the sample driver commands which can be demonstrated. This is for the understanding purpose, it does not reflect exact function calls.
+add_restaurant("<name>", [item1,...item], <processing capacity>,location)
+Search(<name> or <strategy>)
+order(["item1", "item2"],<selected restaurant from search result>")
+Print system stats:
+output (Restaurant name and current processing power):
+A2B: 3
+Rasaganga: 5
+Eat Fit: 0
+fulfilled_item_for_restaurant("#1")
+
